@@ -93,6 +93,16 @@ namespace Scraper.Altex
         }
 
         /// <summary>
+        /// Find and return unique values from a IEnumerable type
+        /// </summary>
+        /// <param name="cateogryLinks"></param>
+        /// <returns></returns>
+        private static IEnumerable<string> GetDistinctCategories(IEnumerable<string> cateogryLinks)
+        {
+            return cateogryLinks.Distinct();
+        }
+        
+        /// <summary>
         /// Get nodes
         /// </summary>
         /// <param name="categoryAddress"></param>
@@ -106,15 +116,7 @@ namespace Scraper.Altex
             return storeCategoryHtmlNodeCollection;
         }
 
-        /// <summary>
-        /// Find and return unique values from a IEnumerable type
-        /// </summary>
-        /// <param name="cateogryLinks"></param>
-        /// <returns></returns>
-        private static IEnumerable<string> GetDistinctCategories(IEnumerable<string> cateogryLinks)
-        {
-            return cateogryLinks.Distinct();
-        }
+
 
         
         //todo write to file in stock categories
