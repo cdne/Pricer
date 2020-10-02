@@ -115,12 +115,12 @@ namespace Scraper.Altex
                 connectToStoreCategory.DocumentNode.SelectNodes($"//select[@class='js-trigger-catalog-toolbar-apply-filters']/option");
             return storeCategoryHtmlNodeCollection;
         }
-
-
-
         
-        //todo write to file in stock categories
-        // return a list with data
+        /// <summary>
+        /// Get all in stock category links
+        /// </summary>
+        /// <param name="categoryLinks">IEnumerable with all category pages</param>
+        /// <returns>IEnumerable with correct in stock category links</returns>
         public static IEnumerable<string> GetInStockCategoryLinks(IEnumerable<string> categoryLinks)
         {
             try
