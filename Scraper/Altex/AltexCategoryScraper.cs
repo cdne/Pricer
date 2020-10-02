@@ -27,8 +27,7 @@ namespace Scraper.Altex
         public  IEnumerable<string> GetAllCategories(string siteMap)
         {
 
-            var websiteLink = new HtmlWeb().Load(siteMap);
-
+            var websiteLink = StoreConnection.ConnectToStoreAddress(siteMap);
             var allHrefNodes = GetAllHrefNodesFromLink(websiteLink);
             
             AddNonCategoryLinksToDictionary(_incorrectCategoryLinksDictionary);
