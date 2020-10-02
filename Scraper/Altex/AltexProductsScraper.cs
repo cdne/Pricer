@@ -74,7 +74,7 @@ namespace Scraper.Altex
         /// Return all products from list
         /// </summary>
         /// <param name="categoryPages">list of category pages</param>
-        /// <returns>list of prodcut objects</returns>
+        /// <returns>list of product objects</returns>
         internal IEnumerable<Product> GetProducts(IEnumerable<string> categoryPages)
         {
             try
